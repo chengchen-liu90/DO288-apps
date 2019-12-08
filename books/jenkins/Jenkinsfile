@@ -64,7 +64,7 @@ pipeline {
 			oc project ${DEV_PROHECT}
 			oc new-app --name books nodejs:8~${APP_GIT_URL} \
 			--build-env npm_config_registry=${NEXUS_SERVER} \
-			--contect-dir ${APP_NAME}
+			--context-dir ${APP_NAME}
 			
 			oc expose svc/${APP_NAME}
 		'''
